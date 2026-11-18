@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bilingual standalone document",
+  "description": "All content is plain text. validate.py additionally enforces unique section IDs, table widths, URL host/credentials/control rules, UTF-8 and whitespace-only rejection. No raw HTML or Markdown interpretation.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "kind": {
+      "enum": [
+        "lesson",
+        "meeting",
+        "article"
+      ]
+    },
+    "visibility": {
+      "enum": [
+        "student",
+        "internal",
+        "public"
+      ]
+    },
+    "title": {
+      "$ref": "#/$defs/pair"
+    },
+    "subtitle": {
+      "$ref": "#/$defs/pair"
+    },
+    "default_language": {
+      "enum": [
+        "zh",
+        "en"
+      ],
+      "default": "zh"
+    },
+    "metadata": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "$ref": "#/$defs/pair"
+          },
+          "value": {
+            "$ref": "#/$defs/pair"
+          }
+        },
+        "required": [
+          "label",
+          "value"
+        ]
+      },
+      "minItems": 0
+    },
+    "notice": {
+      "$ref": "#/$defs/pair"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/section"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "slug",
+    "kind",
+    "visibility",
+    "title",
+    "subtitle",
+    "metadata",
+    "sections"
+  ],
+  "$defs": {
+    "pair": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "zh": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "zh",
+        "en"
+      ]
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "title": {
+          "$ref": "#/$defs/pair"
+        },
+        "lead": {
+          "$ref": "#/$defs/pair"
+        },
+        "blocks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/block"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "blocks"
+      ]
+    },
+    "block": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "paragraph"
+            },
+            "text": {
+              "$ref": "#/$defs/pair"
+            }
+          },
+          "required": [
+            "type",
+            "text"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "callout"
+            },
+            "text": {
+              "$ref": "#/$defs/pair"
+            },
+            "title": {
+              "$ref": "#/$defs/pair"
+            },
+            "tone": {
+              "enum": [
+                "info",
+                "warning"
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "text"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "list"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/pair"
+              },
+              "minItems": 1
+            },
+            "ordered": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "type",
+            "items"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "table"
+            },
+            "headers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/pair"
+              },
+              "minItems": 1
+            },
+            "rows": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/pair"
+                },
+                "minItems": 1
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "type",
+            "headers",
+            "rows"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "links"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "label": {
+                    "$ref": "#/$defs/pair"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "pattern": "^https?://[^\\s]+$"
+                  }
+                },
+                "required": [
+                  "label",
+                  "url"
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "type",
+            "items"
+          ]
+        }
+      ]
+    }
+  }
+}

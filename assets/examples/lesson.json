@@ -1,0 +1,52 @@
+{
+  "slug": "fictional-light-and-shadow",
+  "kind": "lesson",
+  "visibility": "student",
+  "title": {"zh": "光与影：从观察到证据", "en": "Light and Shadow: From Observation to Evidence"},
+  "subtitle": {"zh": "虚构学习指南 · 用小实验解释影子的变化", "en": "Fictional learner guide · Explain changing shadows through a small experiment"},
+  "default_language": "zh",
+  "metadata": [
+    {"label": {"zh": "对象", "en": "Audience"}, "value": {"zh": "虚构七年级学习者", "en": "Fictional Grade 7 learners"}},
+    {"label": {"zh": "时长", "en": "Duration"}, "value": {"zh": "45 分钟", "en": "45 minutes"}},
+    {"label": {"zh": "成果", "en": "Outcome"}, "value": {"zh": "一张观察记录与一段解释", "en": "One observation record and a short explanation"}}
+  ],
+  "notice": {"zh": "这是用于测试版式和交互的虚构原型，不是实际课程要求。", "en": "This fictional prototype tests layout and interaction. It is not an actual course requirement."},
+  "sections": [
+    {
+      "id": "goals",
+      "title": {"zh": "01 · 今天的目标", "en": "01 · Today’s goals"},
+      "lead": {"zh": "先提出预测，再用可重复的观察检查它。", "en": "Make a prediction, then check it with repeatable observations."},
+      "blocks": [
+        {"type": "callout", "title": {"zh": "学习目标", "en": "Learning objective"}, "text": {"zh": "能描述光源距离变化时影子的变化，并用至少两条观察证据解释你的结论。", "en": "Describe how a shadow changes as the light source moves, and explain your conclusion using at least two observations."}, "tone": "info"},
+        {"type": "paragraph", "text": {"zh": "材料：小手电筒、不透明积木、白纸和直尺。实验前与同伴约定：哪一个变量改变，哪几个条件保持不变？", "en": "Materials: a small flashlight, an opaque block, white paper and a ruler. Before experimenting, agree with your partner: which variable changes, and which conditions stay the same?"}},
+        {"type": "callout", "title": {"zh": "安全提醒（虚构示例）", "en": "Safety reminder (fictional example)"}, "text": {"zh": "请勿把光直接照向眼睛。让桌面保持整洁，并将电线移出走道。", "en": "Do not shine light directly into anyone’s eyes. Keep the table clear and cables out of walkways."}, "tone": "warning"}
+      ]
+    },
+    {
+      "id": "investigate",
+      "title": {"zh": "02 · 实验步骤", "en": "02 · Investigation steps"},
+      "blocks": [
+        {"type": "list", "ordered": true, "items": [
+          {"zh": "5 分钟：画出装置，写下一条可以检验的预测。", "en": "5 minutes: sketch the setup and write one testable prediction."},
+          {"zh": "15 分钟：保持积木与白纸的位置不变，改变光源距离；每次记录影子宽度。", "en": "15 minutes: keep the block and paper fixed, change the light-source distance, and record the shadow width each time."},
+          {"zh": "10 分钟：重复测量，检查结果是否一致。", "en": "10 minutes: repeat measurements and check consistency."},
+          {"zh": "10 分钟：与同伴比较证据，写出解释。", "en": "10 minutes: compare evidence with your partner and write an explanation."},
+          {"zh": "5 分钟：整理器材，完成离堂反思。", "en": "5 minutes: put away equipment and complete the exit reflection."}
+        ]},
+        {"type": "table", "headers": [{"zh": "记录项", "en": "Record"}, {"zh": "填写内容", "en": "What to include"}], "rows": [
+          [{"zh": "变量", "en": "Variable"}, {"zh": "光源到积木的距离（厘米）", "en": "Distance from light source to block (cm)"}],
+          [{"zh": "测量", "en": "Measurement"}, {"zh": "影子宽度与重复测量结果（厘米）", "en": "Shadow width and repeated measurements (cm)"}],
+          [{"zh": "解释", "en": "Explanation"}, {"zh": "结论、两条证据及一项局限", "en": "A conclusion, two pieces of evidence and one limitation"}]
+        ]}
+      ]
+    },
+    {
+      "id": "reflect",
+      "title": {"zh": "03 · 反思与资源", "en": "03 · Reflection and resources"},
+      "blocks": [
+        {"type": "list", "items": [{"zh": "哪一条观察最支持你的解释？", "en": "Which observation best supports your explanation?"}, {"zh": "如果重新实验，你会怎样提高测量的一致性？", "en": "If you repeated the experiment, how would you improve measurement consistency?"}]},
+        {"type": "links", "items": [{"label": {"zh": "示例资源地址（占位，不含课程资料）", "en": "Example resource address (placeholder, no course material)"}, "url": "https://example.org/"}]}
+      ]
+    }
+  ]
+}

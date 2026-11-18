@@ -1,0 +1,46 @@
+{
+  "slug": "fictional-library-pilot",
+  "kind": "meeting",
+  "visibility": "internal",
+  "title": {"zh": "共享阅读角试点：会议简报", "en": "Shared Reading Corner Pilot: Meeting Brief"},
+  "subtitle": {"zh": "虚构内部示例 · 区分已确认事项与待讨论提案", "en": "Fictional internal example · Separate confirmed decisions from proposals"},
+  "default_language": "zh",
+  "metadata": [
+    {"label": {"zh": "会议日期", "en": "Meeting date"}, "value": {"zh": "虚构日期：2030 年 4 月 12 日", "en": "Fictional date: 12 April 2030"}},
+    {"label": {"zh": "参与角色", "en": "Participant roles"}, "value": {"zh": "协调组、资源组、反馈组（均为虚构）", "en": "Coordination, resources and feedback teams (all fictional)"}},
+    {"label": {"zh": "阶段", "en": "Stage"}, "value": {"zh": "小范围试点准备", "en": "Small pilot preparation"}}
+  ],
+  "notice": {"zh": "全部内容均为虚构，不含真实同事或学生信息。“仅限内部”标签不是访问控制；若实际部署内部资料，必须使用身份验证。", "en": "All content is fictional and contains no real colleague or student information. The “Internal only” badge is not access control; actual internal hosting requires authentication."},
+  "sections": [
+    {
+      "id": "summary",
+      "title": {"zh": "01 · 简要结论", "en": "01 · Summary"},
+      "lead": {"zh": "先验证空间与借阅流程，再决定是否扩大试点。", "en": "Validate the space and borrowing process before deciding whether to expand."},
+      "blocks": [
+        {"type": "callout", "title": {"zh": "已确认（虚构示例）", "en": "Confirmed (fictional example)"}, "text": {"zh": "同意先拟定一个小规模试点方案。尚未批准启动日期、采购预算或扩大范围。", "en": "The teams agreed to draft a small pilot plan. No launch date, purchasing budget or expansion has been approved."}, "tone": "info"},
+        {"type": "list", "items": [{"zh": "资源组将盘点现有书籍，不收集读者个人信息。", "en": "The resources team will inventory existing books without collecting reader personal information."}, {"zh": "反馈组将提出匿名反馈问题，供下次会议审阅。", "en": "The feedback team will propose anonymous feedback questions for review at the next meeting."}]}
+      ]
+    },
+    {
+      "id": "actions",
+      "title": {"zh": "02 · 行动清单", "en": "02 · Action list"},
+      "blocks": [
+        {"type": "table", "headers": [{"zh": "行动", "en": "Action"}, {"zh": "责任角色", "en": "Responsible role"}, {"zh": "时间与状态", "en": "Timing and status"}], "rows": [
+          [{"zh": "草拟空间布置与借阅流程", "en": "Draft space layout and borrowing process"}, {"zh": "协调组", "en": "Coordination team"}, {"zh": "下次会议前；具体日期待确认", "en": "Before the next meeting; exact date unconfirmed"}],
+          [{"zh": "盘点现有书籍并列出缺口", "en": "Inventory books and identify gaps"}, {"zh": "资源组", "en": "Resources team"}, {"zh": "已同意；截止日期待确认", "en": "Agreed; deadline unconfirmed"}],
+          [{"zh": "提交匿名反馈问题草案", "en": "Submit draft anonymous feedback questions"}, {"zh": "反馈组", "en": "Feedback team"}, {"zh": "已同意；截止日期待确认", "en": "Agreed; deadline unconfirmed"}]
+        ]}
+      ]
+    },
+    {
+      "id": "open-questions",
+      "title": {"zh": "03 · 待决事项", "en": "03 · Open questions"},
+      "blocks": [
+        {"type": "callout", "title": {"zh": "提案，不是决定", "en": "Proposal, not a decision"}, "text": {"zh": "“试行两周”和“增购书籍”仅为讨论提案。需要先确认时间安排与可用预算，不能作为已批准承诺对外表述。", "en": "A “two-week trial” and “additional book purchases” are discussion proposals only. Scheduling and available budget must be confirmed before presenting either as an approved commitment."}, "tone": "warning"},
+        {"type": "list", "ordered": true, "items": [{"zh": "确认空间使用安排与管理责任。", "en": "Confirm space availability and management responsibility."}, {"zh": "审阅反馈问题是否必要、清晰且不识别个人。", "en": "Review whether feedback questions are necessary, clear and non-identifying."}, {"zh": "在方案通过后再确认启动日期。", "en": "Confirm the launch date only after the plan is approved."}]},
+        {"type": "paragraph", "text": {"zh": "下一次会议日期待确认。本简报没有记录个人姓名、真实会议来源或私密附件。", "en": "The next meeting date remains unconfirmed. This brief includes no personal names, actual meeting sources or private attachments."}},
+        {"type": "links", "items": [{"label": {"zh": "公共示例链接（占位）", "en": "Public example link (placeholder)"}, "url": "https://example.org/"}]}
+      ]
+    }
+  ]
+}
